@@ -4,13 +4,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(exclude = {"date", "state", "coefficient", "stake", "wining"})
+@EqualsAndHashCode(exclude = {"date", "state", "coefficient", "stake", "winning"})
 public class MatchInfo implements Comparable {
 
     private MatchState state = MatchState.pending;
     private double coefficient;
     private double stake;
-    private double wining;
+    private double winning;
     private String date;
     private String dateOfBet;
     private Event event;

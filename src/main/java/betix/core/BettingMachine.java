@@ -105,7 +105,6 @@ public abstract class BettingMachine extends RetryTask {
     }
 
     private static void unlockInstance() {
-
         try {
             if (fileLock != null) fileLock.release();
             if (randomAccessFile != null) randomAccessFile.close();
@@ -114,11 +113,10 @@ public abstract class BettingMachine extends RetryTask {
         }
 
         try {
-            if (lockedfile != null) lockedfile.delete();
+            lockedfile.delete();
         } catch (Exception e) {
             logger.error("Unable to delete lock file: " + lockedfile, e);
         }
-
     }
 
     public static void shutdown(int status) {

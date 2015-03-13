@@ -35,7 +35,7 @@ class AccountInfoManagerBet365 extends RetryTask implements betix.core.AccountIn
     private static final String matchInfoWinState = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoWinState);
     private static final String matchInfoStakeRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoStakeRegEx);
     private static final String matchInfoCoefficientRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoCoefficientRegEx);
-    private static final String matchInfoWiningRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoWiningRegEx);
+    private static final String matchInfoWinningRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoWinningRegEx);
     private static final String matchInfoEventRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoEventRegEx);
     private static final String matchInfoDateRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoDateRegEx);
     private static final String matchInfoDateTimeRegEx = Configuration.getDefaultConfig().getConfigAsString(ConfigKey.matchInfoDateTimeRegEx);
@@ -254,7 +254,7 @@ class AccountInfoManagerBet365 extends RetryTask implements betix.core.AccountIn
         if (matchInfoString.contains(matchInfoPendingState)) {
             matchInfo.setState(MatchState.pending);
         } else if (matchInfoString.contains(matchInfoLoseState)) {
-            matchInfo.setState(MatchState.losing);
+            matchInfo.setState(MatchState.loosing);
         } else if (matchInfoString.contains(matchInfoWinState)) {
             matchInfo.setState(MatchState.winning);
         }
@@ -264,8 +264,8 @@ class AccountInfoManagerBet365 extends RetryTask implements betix.core.AccountIn
         matchInfo.setStake(Stake.get(stakeString).value);
         matchInfo.setCoefficient(Double.valueOf(searchRegEx(matchInfoString, matchInfoCoefficientRegEx).replaceAll(",", ".")));
 
-        //String winningString = searchRegEx(matchInfoString, matchInfoWiningRegEx);
-        //matchInfo.setWining(Double.valueOf(winningString.replaceAll(",", ".")));
+        //String winningString = searchRegEx(matchInfoString, matchInfoWinningRegEx);
+        //matchInfo.setWinning(Double.valueOf(winningString.replaceAll(",", ".")));
 
         matchInfo.setEvent(new Event(searchRegEx(matchInfoString, matchInfoEventRegEx)));
 

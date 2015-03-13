@@ -45,7 +45,7 @@ public enum ConfigKey {
     historyMatchInfoLinkRegEx,
     matchInfoStakeRegEx,
     matchInfoCoefficientRegEx,
-    matchInfoWiningRegEx,
+    matchInfoWinningRegEx,
     matchInfoEventRegEx,
     matchInfoDateRegEx,
     matchInfoDateTimeRegEx,

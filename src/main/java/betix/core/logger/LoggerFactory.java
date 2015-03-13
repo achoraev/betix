@@ -16,5 +16,4 @@ public class LoggerFactory {
     public static ILoggerFactory getILoggerFactory() {
         return org.slf4j.LoggerFactory.getILoggerFactory();
     }
-
 }

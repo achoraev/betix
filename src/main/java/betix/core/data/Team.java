@@ -66,5 +66,4 @@ public class Team implements Comparable {
         }
         return 0;
     }
-
 }

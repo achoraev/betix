@@ -27,7 +27,7 @@ public class AccountInfo {
 
             for (MatchInfo info : matchInfoFinished) {
                 if (info.getEvent().isParticipant(team.getName())) {
-                    if (MatchState.losing.equals(matchInfo.getState())) {
+                    if (MatchState.loosing.equals(matchInfo.getState())) {
                         team.calculateStakes(Stake.get(matchInfo.getStake()));
                     } else {
                         team.calculateStakes(Stake.noStake);
@@ -89,5 +89,4 @@ public class AccountInfo {
         }
         return false;
     }
-
 }

@@ -87,6 +87,4 @@ class MessageBoxFrame extends JFrame implements MouseListener {
     public void mouseExited(MouseEvent e) {
         setVisible(false);
     }
-
-
 }

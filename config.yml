@@ -11,11 +11,11 @@ teamImageDir: team
 siteUrl: "http://www.788-sb.com"
 siteHistoryUrl: "https://members.788-sb.com/MEMBERS/Authenticated/History/Sports/Default.aspx"
 imageExt: .png
-browser: firefox
+browser: C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe
 siteName: bet365.com
 sikuliMinSimilarity: 0.5
 showMessageBox: true
-messageBoxX: 0
+messageBoxX: 600
 messageBoxY: 0
 messageBoxColor: Color.ORANGE
 dateFormat: dd/MM/yyyy
@@ -28,7 +28,7 @@ matchInfoLoseState: "Загубен"
 matchInfoWinState: "Печеливш"
 matchInfoStakeRegEx: "Залог:\\s*(.*?)\\s"
 matchInfoCoefficientRegEx: "Никой\\s*(.*?)\\s"
-matchInfoWiningRegEx: "Залог:\\s*.*?\\sПеч.*?:\\s*(.*?)\\s"
+matchInfoWinningRegEx: "Залог:\\s*.*?\\sПеч.*?:\\s*(.*?)\\s"
 matchInfoEventRegEx: "Равен\\s*(.*?)\\s*\\(Краен Резултат"
 matchInfoDateRegEx: "Краен Резултат\\)\\s*(.*?)\\s*Никой"
 matchInfoDateTimeRegEx: "Час на залога:\\s*(.*?)\\s*Принтирай"
