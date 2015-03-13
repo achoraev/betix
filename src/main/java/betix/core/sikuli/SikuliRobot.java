@@ -78,7 +78,7 @@ public class SikuliRobot extends Screen {
             logger.debug("mouseMove on target {}", target);
             return super.mouseMove(target);
         } catch (Exception e) {
-            logger.error("error in mouseMove on target {} - Screenshot filename {}", target, takeSnapshot(), e);
+            logger.error("error in mouseMove on target {} - Screen shot filename {}", target, takeSnapshot(), e);
             throw e;
         }
     }
@@ -88,7 +88,7 @@ public class SikuliRobot extends Screen {
             logger.debug("waiting target {}", target);
             return super.wait(target, imageTimeout);
         } catch (Exception e) {
-            logger.error("error in wait on target {} - Screenshot filename {}", target, takeSnapshot(), e);
+            logger.error("error in wait on target {} - Screen shot filename {}", target, takeSnapshot(), e);
             throw e;
         }
     }
@@ -104,7 +104,7 @@ public class SikuliRobot extends Screen {
             return super.find(target);
         } catch (Exception e) {
             if (takeSnapshot) {
-                logger.error("error in find on target {} - Screenshot filename {}", target, takeSnapshot(), e);
+                logger.error("error in find on target {} - Screen shot filename {}", target, takeSnapshot(), e);
             } else {
                 logger.warn("error in find on target {} ", target);
             }
@@ -130,7 +130,7 @@ public class SikuliRobot extends Screen {
             super.wait(target, imageTimeout);
             return super.hover(target);
         } catch (Exception e) {
-            logger.error("error in hover on target {} - Screenshot filename {}", target, takeSnapshot(), e);
+            logger.error("error in hover on target {} - Screen shot filename {}", target, takeSnapshot(), e);
             throw e;
         }
     }
@@ -142,7 +142,7 @@ public class SikuliRobot extends Screen {
             region.wait(target, imageTimeout);
             return region.hover(target);
         } catch (Exception e) {
-            logger.error("error in hover on target {} - Screenshot filename {}, region filename {}", target, takeSnapshot(), takeSnapshot(region), e);
+            logger.error("error in hover on target {} - Screen shot filename {}, region filename {}", target, takeSnapshot(), takeSnapshot(region), e);
             throw e;
         }
     }
@@ -154,7 +154,7 @@ public class SikuliRobot extends Screen {
             super.wait(target, imageTimeout);
             return super.click(target);
         } catch (Exception e) {
-            logger.error("error in click on target {} - Screenshot filename {}", target, takeSnapshot(), e);
+            logger.error("error in click on target {} - Screen shot filename {}", target, takeSnapshot(), e);
             throw e;
         }
     }
@@ -171,7 +171,7 @@ public class SikuliRobot extends Screen {
             return region.click(target);
         } catch (Exception e) {
             if (takeSnapshot) {
-                logger.error("error in click on target {} - Screenshot filename {}, region filename {}", target, takeSnapshot(), takeSnapshot(region), e);
+                logger.error("error in click on target {} - Screen shot filename {}, region filename {}", target, takeSnapshot(), takeSnapshot(region), e);
             } else {
                 logger.warn("error in click on target {} ", target);
             }
@@ -186,7 +186,7 @@ public class SikuliRobot extends Screen {
             super.wait(target, imageTimeout);
             return super.doubleClick(target);
         } catch (Exception e) {
-            logger.error("error in doubleClick on target {} - Screenshot filename {}", target, takeSnapshot(), e);
+            logger.error("error in doubleClick on target {} - Screen shot filename {}", target, takeSnapshot(), e);
             throw e;
         }
     }
@@ -239,7 +239,7 @@ public class SikuliRobot extends Screen {
         try {
             ImageIO.write(super.capture(rectangle).getImage(), "png", new File(Logger.LOG_DIR, name + ".png"));
         } catch (IOException e) {
-            logger.debug("can't write screenshot image to file", e);
+            logger.debug("can't write screen shot image to file", e);
         }
         return name + ".png";
     }
